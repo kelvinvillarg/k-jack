@@ -76,7 +76,7 @@ gdjs.DeathCode.condition0IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.
 gdjs.DeathCode.condition1IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }}
 if (gdjs.DeathCode.condition1IsTrue_0.val) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level", false);
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Level 1", false);
 }}
 
 }

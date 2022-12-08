@@ -48,14 +48,18 @@ gdjs.Level_321Code.condition1IsTrue_0 = {val:false};
 gdjs.Level_321Code.condition2IsTrue_0 = {val:false};
 
 
-gdjs.Level_321Code.asyncCallback8881684 = function (runtimeScene, asyncObjectsList) {
+gdjs.Level_321Code.asyncCallback9522004 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(runtimeScene.getObjects("NextLevelButton"), gdjs.Level_321Code.GDNextLevelButtonObjects3);
+gdjs.copyArray(runtimeScene.getObjects("PlayPauseToggle"), gdjs.Level_321Code.GDPlayPauseToggleObjects3);
 gdjs.copyArray(runtimeScene.getObjects("WinMessage"), gdjs.Level_321Code.GDWinMessageObjects3);
 {for(var i = 0, len = gdjs.Level_321Code.GDNextLevelButtonObjects3.length ;i < len;++i) {
     gdjs.Level_321Code.GDNextLevelButtonObjects3[i].setOpacity(gdjs.Level_321Code.GDNextLevelButtonObjects3[i].getOpacity() + (5));
 }
 }{for(var i = 0, len = gdjs.Level_321Code.GDWinMessageObjects3.length ;i < len;++i) {
     gdjs.Level_321Code.GDWinMessageObjects3[i].setOpacity(gdjs.Level_321Code.GDWinMessageObjects3[i].getOpacity() + (5));
+}
+}{for(var i = 0, len = gdjs.Level_321Code.GDPlayPauseToggleObjects3.length ;i < len;++i) {
+    gdjs.Level_321Code.GDPlayPauseToggleObjects3[i].hide();
 }
 }}
 gdjs.Level_321Code.eventsList0 = function(runtimeScene, asyncObjectsList) {
@@ -67,14 +71,14 @@ gdjs.Level_321Code.eventsList0 = function(runtimeScene, asyncObjectsList) {
 const parentAsyncObjectsList = asyncObjectsList;
 {
 const asyncObjectsList = gdjs.LongLivedObjectsList.from(parentAsyncObjectsList);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(105), (runtimeScene) => (gdjs.Level_321Code.asyncCallback8881684(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(105), (runtimeScene) => (gdjs.Level_321Code.asyncCallback9522004(runtimeScene, asyncObjectsList)));
 }
 }
 
 }
 
 
-};gdjs.Level_321Code.asyncCallback9269348 = function (runtimeScene, asyncObjectsList) {
+};gdjs.Level_321Code.asyncCallback9522572 = function (runtimeScene, asyncObjectsList) {
 gdjs.copyArray(asyncObjectsList.getObjects("LevelBanner"), gdjs.Level_321Code.GDLevelBannerObjects2);
 
 {for(var i = 0, len = gdjs.Level_321Code.GDLevelBannerObjects2.length ;i < len;++i) {
@@ -93,7 +97,7 @@ gdjs.Level_321Code.eventsList1 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 for (const obj of gdjs.Level_321Code.GDLevelBannerObjects1) asyncObjectsList.addObject("LevelBanner", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.Level_321Code.asyncCallback9269348(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(3), (runtimeScene) => (gdjs.Level_321Code.asyncCallback9522572(runtimeScene, asyncObjectsList)));
 }
 }
 
